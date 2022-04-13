@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex h-screen">
+
+    <div class="mx-auto w-96 prose">
+    <h1 class="my-10">Update Todo</h1>
+
+<form action="" method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button class="rounded-lg bg-red-500 w-full text-white p-2" type="submit">Update</button>
+
+</form>
+
+<br/>
+ <!-- <a href="{% url 'tasks-view'%}">Go to Tasks Application</a>  -->
+
+</div>
+
+</div>
+{% endblock %}
+ 

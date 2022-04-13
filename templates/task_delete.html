@@ -1,0 +1,8 @@
+<form method="post">
+    <p>Are you sure you want to delete "{{object}}"?</p>
+    {% csrf_token %}
+    <input type="submit" value="Confirm"/>
+</form>
+
+<br/>
+<a href="{% url 'tasks-view'%}">Go to Tasks Application</a>

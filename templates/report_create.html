@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex h-screen">
+
+    <div class="mx-auto w-96 prose">
+    <h1 class="my-10">Configure report time (in a day)</h1>
+
+    {% if form.instance.pk %}
+    Status : <span class="text-green-500">CONFIGURED</span>
+    {% else %}
+    Status : <span class="text-red-500">NOT CONFIGURED</span>
+    {% endif %}
+
+    <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button class="rounded-lg bg-red-500 w-full text-white p-2" type="submit">Submit</button>
+    </form>
+
+<br/>
+
+</div>
+
+</div>
+{% endblock %}
